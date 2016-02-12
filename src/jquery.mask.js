@@ -417,7 +417,7 @@
         };
 
 
-    $.fn.mask = function(mask, options) {
+    $.fn.jq_mask = function(mask, options) {
         options = options || {};
         var selector = this.selector,
             globals = $.jMaskGlobals,
@@ -439,7 +439,7 @@
         return this;
     };
 
-    $.fn.unmask = function() {
+    $.fn.jq_unmask = function() {
         clearInterval($.maskWatchers[this.selector]);
         delete $.maskWatchers[this.selector];
         return this.each(function() {
@@ -450,7 +450,7 @@
         });
     };
 
-    $.fn.cleanVal = function() {
+    $.fn.jq_cleanVal = function() {
         return this.data('mask').getCleanVal();
     };
 
